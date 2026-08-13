@@ -6,7 +6,7 @@
 
 This module covers the campus foundation. I divided the network into departmental VLANs, assigned access ports, verified Layer 2 isolation, and then introduced router-on-a-stick so the VLANs could communicate through controlled Layer 3 gateways.
 
-I also configured DHCP pools, added DNS options, connected wireless endpoints, and expanded the design with departmental printers. The walkthrough preserves the configuration evidence and identifies addressing or command-placement issues visible in the original lab.
+I also configured DHCP pools, added DNS options, connected wireless endpoints, and expanded the design with departmental printers. 
 
 ## Objectives
 
