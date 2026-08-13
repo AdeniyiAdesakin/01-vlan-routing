@@ -370,4 +370,4 @@ This stage established the campus switching, routing, and addressing foundation.
 
 ## Continue the Project
 
-[Next: Network Security with ACLs and Port Security →](../02-network-security/README.md)
+[Next: Network Security with ACLs and Port Security →](https://github.com/AdeniyiAdesakin/02-network-security)
