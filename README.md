@@ -2,8 +2,6 @@
 
 **Cisco 2960 | VLANs | Access Ports | 802.1Q | Router-on-a-Stick | DHCP | Wireless | Printers**
 
-[← Return to the main project](../README.md)
-
 ## Module Overview
 
 This module covers the campus foundation. I divided the network into departmental VLANs, assigned access ports, verified Layer 2 isolation, and then introduced router-on-a-stick so the VLANs could communicate through controlled Layer 3 gateways.
