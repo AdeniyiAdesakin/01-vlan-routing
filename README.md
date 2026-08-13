@@ -42,11 +42,11 @@ Switch(config)# hostname CoreSwitch
 ```
 
 <p align="center">
-  <img src="../images/vlan-routing/01.png" width="750" alt="Selecting a Cisco 2960 switch in Packet Tracer">
+  <img src="https://i.imgur.com/i6at09t.png" width="750" alt="Selecting a Cisco 2960 switch in Packet Tracer">
 </p>
 
 <p align="center">
-  <img src="../images/vlan-routing/02.png" width="750" alt="Renaming the switch CoreSwitch from the Cisco IOS CLI">
+  <img src="https://i.imgur.com/hn3qMHT.png" width="750" alt="Renaming the switch CoreSwitch from the Cisco IOS CLI">
 </p>
 
 ### 2. Created the Departmental VLANs
@@ -65,7 +65,7 @@ CoreSwitch(config-vlan)# name Server_Room
 ```
 
 <p align="center">
-  <img src="../images/vlan-routing/03.png" width="750" alt="Creating VLANs 10, 20, 30, and 100 and correcting VLAN names in Cisco IOS">
+  <img src="https://i.imgur.com/rmCLHj0.png" width="750" alt="Creating VLANs 10, 20, 30, and 100 and correcting VLAN names in Cisco IOS">
 </p>
 
 ### 3. Assigned Access Ports to the VLANs
@@ -85,13 +85,13 @@ CoreSwitch(config)# do write
 ```
 
 <p align="center">
-  <img src="../images/vlan-routing/04.png" width="750" alt="Assigning FastEthernet port ranges to campus VLANs">
+  <img src="https://i.imgur.com/fh0Q8YN.png" width="750" alt="Assigning FastEthernet port ranges to campus VLANs">
 </p>
 
 I then connected two endpoints to each VLAN and organized the topology by department.
 
 <p align="center">
-  <img src="../images/vlan-routing/05.png" width="750" alt="Initial campus topology with Administration, Academics, Student, and Server VLANs">
+  <img src="https://i.imgur.com/eRX3ce5.png" width="750" alt="Initial campus topology with Administration, Academics, Student, and Server VLANs">
 </p>
 
 ### 4. Validated VLAN Isolation
@@ -99,13 +99,13 @@ I then connected two endpoints to each VLAN and organized the topology by depart
 A ping between two hosts in VLAN 10 succeeded, confirming same-VLAN Layer 2 communication.
 
 <p align="center">
-  <img src="../images/vlan-routing/06.png" width="750" alt="Successful ping between two hosts in VLAN 10">
+  <img src="https://i.imgur.com/E9VeuoA.png" width="750" alt="Successful ping between two hosts in VLAN 10">
 </p>
 
 A ping from VLAN 10 to VLAN 20 failed before routing was configured, confirming that the VLANs were isolated.
 
 <p align="center">
-  <img src="../images/vlan-routing/07.png" width="750" alt="Failed cross-VLAN ping before inter-VLAN routing was configured">
+  <img src="https://i.imgur.com/cCcNbV1.png" width="750" alt="Failed cross-VLAN ping before inter-VLAN routing was configured">
 </p>
 
 ## Phase 2: Configured Router-on-a-Stick Inter-VLAN Routing
@@ -121,7 +121,7 @@ CoreSwitch(config-if)# do write
 ```
 
 <p align="center">
-  <img src="../images/vlan-routing/08.png" width="750" alt="Configuring FastEthernet0/1 as an 802.1Q trunk">
+  <img src="https://i.imgur.com/llngkjD.png" width="750" alt="Configuring FastEthernet0/1 as an 802.1Q trunk">
 </p>
 
 ### 2. Renamed and Enabled the Main-Campus Router Interface
@@ -129,7 +129,7 @@ CoreSwitch(config-if)# do write
 I renamed the router **MC_router** and enabled GigabitEthernet0/1 as the parent interface for the VLAN subinterfaces.
 
 <p align="center">
-  <img src="../images/vlan-routing/09.png" width="750" alt="Renaming the router MC_router">
+  <img src="https://i.imgur.com/y7XH0Yr.png" width="750" alt="Renaming the router MC_router">
 </p>
 
 ```text
@@ -138,7 +138,7 @@ MC_router(config-if)# no shutdown
 ```
 
 <p align="center">
-  <img src="../images/vlan-routing/10.png" width="750" alt="Enabling the router GigabitEthernet0/1 interface">
+  <img src="https://i.imgur.com/DIuLMtL.png" width="750" alt="Enabling the router GigabitEthernet0/1 interface">
 </p>
 
 ### 3. Created VLAN Subinterfaces
@@ -166,19 +166,19 @@ MC_router# write memory
 ```
 
 <p align="center">
-  <img src="../images/vlan-routing/11.png" width="750" alt="Configuring the VLAN 10 router subinterface">
+  <img src="https://i.imgur.com/TNmIA7W.png" width="750" alt="Configuring the VLAN 10 router subinterface">
 </p>
 
 <p align="center">
-  <img src="../images/vlan-routing/12.png" width="750" alt="Configuring the VLAN 20 router subinterface">
+  <img src="https://i.imgur.com/O45WoMH.png" width="750" alt="Configuring the VLAN 20 router subinterface">
 </p>
 
 <p align="center">
-  <img src="../images/vlan-routing/13.png" width="750" alt="Configuring the VLAN 30 router subinterface">
+  <img src="https://i.imgur.com/IQ4pjuq.png" width="750" alt="Configuring the VLAN 30 router subinterface">
 </p>
 
 <p align="center">
-  <img src="../images/vlan-routing/14.png" width="750" alt="Configuring the VLAN 100 router subinterface">
+  <img src="https://i.imgur.com/SfVWJX8.png" width="750" alt="Configuring the VLAN 100 router subinterface">
 </p>
 
 ### 4. Verified the Trunk and Routed Interfaces
@@ -186,13 +186,13 @@ MC_router# write memory
 The router showed all four subinterfaces in an up/up state.
 
 <p align="center">
-  <img src="../images/vlan-routing/15.png" width="750" alt="Verifying router subinterfaces with show ip interface brief">
+  <img src="https://i.imgur.com/qHSWSq9.png" width="750" alt="Verifying router subinterfaces with show ip interface brief">
 </p>
 
 The switch reported FastEthernet0/1 as an active 802.1Q trunk carrying VLANs 10, 20, 30, and 100.
 
 <p align="center">
-  <img src="../images/vlan-routing/16.png" width="750" alt="Verifying the 802.1Q trunk with show interfaces trunk">
+  <img src="https://i.imgur.com/VZrUjRt.png" width="750" alt="Verifying the 802.1Q trunk with show interfaces trunk">
 </p>
 
 ### 5. Tested Inter-VLAN Connectivity
@@ -200,17 +200,17 @@ The switch reported FastEthernet0/1 as an active 802.1Q trunk carrying VLANs 10,
 I added the appropriate default gateway to each endpoint.
 
 <p align="center">
-  <img src="../images/vlan-routing/17.png" width="750" alt="Assigning a VLAN default gateway to a campus endpoint">
+  <img src="https://i.imgur.com/EXBsaij.png" width="750" alt="Assigning a VLAN default gateway to a campus endpoint">
 </p>
 
 Pings between the user VLANs and the Server VLAN then succeeded. The first packet loss visible in one test is consistent with initial address-resolution activity; the repeated tests completed successfully.
 
 <p align="center">
-  <img src="../images/vlan-routing/18.png" width="750" alt="Successful inter-VLAN pings after router-on-a-stick configuration">
+  <img src="https://i.imgur.com/VtU3iCk.png" width="750" alt="Successful inter-VLAN pings after router-on-a-stick configuration">
 </p>
 
 <p align="center">
-  <img src="../images/vlan-routing/19.png" width="750" alt="Successful ping between a server and an endpoint in another VLAN">
+  <img src="https://i.imgur.com/F17Jd6u.png" width="750" alt="Successful ping between a server and an endpoint in another VLAN">
 </p>
 
 ## Phase 3: Deployed DHCP for the Campus VLANs
@@ -220,7 +220,7 @@ Pings between the user VLANs and the Server VLAN then succeeded. The first packe
 Before the DHCP pools were fully configured, a client request failed and the host assigned itself an APIPA address. This screenshot provides a useful before-state for the later DHCP validation.
 
 <p align="center">
-  <img src="../images/vlan-routing/20.png" width="750" alt="Client showing DHCP failure and an APIPA address before DHCP configuration">
+  <img src="https://i.imgur.com/6nkQMoD.png" width="750" alt="Client showing DHCP failure and an APIPA address before DHCP configuration">
 </p>
 
 ### 2. Created DHCP Pools
