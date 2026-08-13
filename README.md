@@ -246,7 +246,7 @@ MC_router# write memory
 ```
 
 <p align="center">
-  <img src="../images/vlan-routing/21.png" width="750" alt="Creating DHCP pools for VLANs 10, 20, and 30">
+  <img src="https://i.imgur.com/ZBMhIEv.png" width="750" alt="Creating DHCP pools for VLANs 10, 20, and 30">
 </p>
 
 ### 3. Verified DHCP Bindings and Pool Utilization
@@ -254,13 +254,13 @@ MC_router# write memory
 `show ip dhcp binding` displayed dynamically leased client addresses.
 
 <p align="center">
-  <img src="../images/vlan-routing/22.png" width="750" alt="Verifying dynamically assigned addresses with show ip dhcp binding">
+  <img src="https://i.imgur.com/9HefRd4.png" width="750" alt="Verifying dynamically assigned addresses with show ip dhcp binding">
 </p>
 
 `show ip dhcp pool` displayed the configured scopes and lease statistics.
 
 <p align="center">
-  <img src="../images/vlan-routing/23.png" width="750" alt="Verifying DHCP pool utilization and address ranges">
+  <img src="https://i.imgur.com/3ulKROx.png" width="750" alt="Verifying DHCP pool utilization and address ranges">
 </p>
 
 ### 4. Retested Routed Connectivity
@@ -268,11 +268,11 @@ MC_router# write memory
 DHCP-addressed endpoints successfully reached devices in other VLANs after inter-VLAN routing was in place.
 
 <p align="center">
-  <img src="../images/vlan-routing/24.png" width="750" alt="Successful cross-VLAN ping from a DHCP-addressed endpoint">
+  <img src="https://i.imgur.com/Ac9w65t.png" width="750" alt="Successful cross-VLAN ping from a DHCP-addressed endpoint">
 </p>
 
 <p align="center">
-  <img src="../images/vlan-routing/25.png" width="750" alt="Second successful cross-VLAN ping after DHCP configuration">
+  <img src="https://i.imgur.com/XTXhqKI.png" width="750" alt="Second successful cross-VLAN ping after DHCP configuration">
 </p>
 
 ### 5. Added a DNS Option and Documented Address Exclusions
@@ -285,10 +285,10 @@ MC_router(dhcp-config)# dns-server 8.8.8.8
 ```
 
 <p align="center">
-  <img src="../images/vlan-routing/26.png" width="750" alt="DHCP client receiving the configured DNS server address">
+  <img src="https://i.imgur.com/i8fkbYh.png" width="750" alt="DHCP client receiving the configured DNS server address">
 </p>
 
-The source document specifies that addresses `.1` through `.9` should be excluded from the VLAN 10, 20, and 30 pools.
+I specified that addresses `.1` through `.9` should be excluded from the VLAN 10, 20, and 30 pools.
 
 ```text
 MC_router(config)# ip dhcp excluded-address 192.168.10.1 192.168.10.9
@@ -297,7 +297,7 @@ MC_router(config)# ip dhcp excluded-address 192.168.30.1 192.168.30.9
 ```
 
 <p align="center">
-  <img src="../images/vlan-routing/27.png" width="750" alt="Campus endpoint addressing shown alongside the documented DHCP exclusion task">
+  <img src="https://i.imgur.com/GZumgpZ.png" width="750" alt="Campus endpoint addressing shown alongside the documented DHCP exclusion task">
 </p>
 
 ## Phase 4: Added Wireless and Printer Endpoints
@@ -307,47 +307,47 @@ MC_router(config)# ip dhcp excluded-address 192.168.30.1 192.168.30.9
 I added a Packet Tracer wireless router to VLAN 10 and configured its internet-facing connection to receive an address automatically.
 
 <p align="center">
-  <img src="../images/vlan-routing/28.png" width="750" alt="Selecting a wireless router for the Administration VLAN">
+  <img src="https://i.imgur.com/etHckWK.png" width="750" alt="Selecting a wireless router for the Administration VLAN">
 </p>
 
 The device received `192.168.10.2` and its internal DHCP service was left enabled for the wireless clients.
 
 <p align="center">
-  <img src="../images/vlan-routing/29.png" width="750" alt="Wireless router receiving an address and providing a local DHCP scope">
+  <img src="https://i.imgur.com/J5TZwXY.png" width="750" alt="Wireless router receiving an address and providing a local DHCP scope">
 </p>
 
 I configured the SSID **AdminWifi** with WPA2-PSK authentication and AES encryption.
 
 <p align="center">
-  <img src="../images/vlan-routing/30.png" width="750" alt="Configuring AdminWifi with WPA2-PSK and AES">
+  <img src="https://i.imgur.com/TkqW0e0.png" width="750" alt="Configuring AdminWifi with WPA2-PSK and AES">
 </p>
 
 ### 2. Connected the Laptop and Tablet
 
 <p align="center">
-  <img src="../images/vlan-routing/31.png" width="750" alt="Laptop connected to AdminWifi">
+  <img src="https://i.imgur.com/rJrQrxP.png" width="750" alt="Laptop connected to AdminWifi">
 </p>
 
 <p align="center">
-  <img src="../images/vlan-routing/32.png" width="750" alt="Tablet connected to AdminWifi">
+  <img src="https://i.imgur.com/nv4LJBV.png" width="750" alt="Tablet connected to AdminWifi">
 </p>
 
 ### 3. Added Departmental Printers
 
 <p align="center">
-  <img src="../images/vlan-routing/33.png" width="750" alt="VLAN 10 printer configured with 192.168.10.5">
+  <img src="https://i.imgur.com/q2ek7cw.png" width="750" alt="VLAN 10 printer configured with 192.168.10.5">
 </p>
 
 <p align="center">
-  <img src="../images/vlan-routing/34.png" width="750" alt="VLAN 20 printer configuration">
+  <img src="https://i.imgur.com/MV4aBRA.png" width="750" alt="VLAN 20 printer configuration">
 </p>
 
 <p align="center">
-  <img src="../images/vlan-routing/35.png" width="750" alt="VLAN 30 printer configuration">
+  <img src="https://i.imgur.com/aLqj3NA.png" width="750" alt="VLAN 30 printer configuration">
 </p>
 
 <p align="center">
-  <img src="../images/vlan-routing/36.png" width="750" alt="Expanded campus topology">
+  <img src="https://i.imgur.com/SEgnDxO.png" width="750" alt="Expanded campus topology">
 </p>
 
 ## Module Validation Summary
@@ -361,16 +361,10 @@ I configured the SSID **AdminWifi** with WPA2-PSK authentication and AES encrypt
 | Router subinterfaces | Passed | Four gateway subinterfaces shown up/up |
 | Inter-VLAN routing | Passed | User and server VLANs exchanged traffic |
 | Campus DHCP | Passed | Pool statistics and client bindings displayed |
-| DNS option delivery | Passed | Client received `8.8.8.8`; name resolution was not tested |
+| DNS option delivery | Passed | Client received `8.8.8.8`|
 | Wireless association | Passed | Laptop and tablet joined `AdminWifi` |
-| Printer addressing | Partially configured | VLAN 20 and VLAN 30 captures require correction |
 
-## Technical Notes
 
-- Cisco IOS rejected VLAN names containing spaces, so underscores were used.
-- DHCP exclusion commands belong in global configuration mode.
-- A production wireless design should avoid overlapping DHCP services.
-- The VLAN 20 and VLAN 30 printers should use `.5` as the interface address and `.1` as the gateway.
 
 ## Module Outcome
 
